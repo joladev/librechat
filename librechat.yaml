@@ -1,0 +1,21 @@
+version: 1.2.4
+cache: true
+
+webSearch:
+  searchProvider: tavily
+  scraperProvider: tavily
+  rerankerType: jina
+  tavilyApiKey: "${TAVILY_API_KEY}"
+  jinaApiKey: "${JINA_API_KEY}"
+
+endpoints:
+  custom:
+    - name: "OMLX"
+      apiKey: "monkey"
+      baseURL: "${OMLX_BASE_URL}"
+      models:
+        default: ["Qwen3.6-35B-A3B-4bit"]
+        fetch: true
+      titleConvo: true
+      titleModel: "Qwen3.6-35B-A3B-4bit"
+      modelDisplayLabel: "Qwen3.6 35B (Mac)"
