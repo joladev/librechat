@@ -8,6 +8,46 @@ webSearch:
   tavilyApiKey: "${TAVILY_API_KEY}"
   jinaApiKey: "${JINA_API_KEY}"
 
+mcpServers:
+  notion:
+    type: streamable-http
+    url: https://mcp.notion.com/mcp
+
+  sentry:
+    type: streamable-http
+    url: https://mcp.sentry.dev/mcp
+
+  railway:
+    type: streamable-http
+    url: https://mcp.railway.com
+
+  slack:
+    type: streamable-http
+    url: https://mcp.slack.com/mcp
+
+  linear:
+    type: sse
+    url: https://mcp.linear.app/sse
+
+  larm:
+    type: streamable-http
+    url: https://app.larm.dev/mcp
+
+  posthog:
+    type: streamable-http
+    url: https://mcp.posthog.com/mcp
+    headers:
+      Authorization: "Bearer ${POSTHOG_PERSONAL_API_KEY}"
+
+  grafana:
+    type: stdio
+    command: uvx
+    args:
+      - mcp-grafana
+    env:
+      GRAFANA_URL: "${GRAFANA_URL}"
+      GRAFANA_SERVICE_ACCOUNT_TOKEN: "${GRAFANA_SERVICE_ACCOUNT_TOKEN}"
+
 endpoints:
   custom:
     - name: "OMLX"
