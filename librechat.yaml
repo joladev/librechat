@@ -48,6 +48,12 @@ mcpServers:
       GRAFANA_URL: "${GRAFANA_URL}"
       GRAFANA_SERVICE_ACCOUNT_TOKEN: "${GRAFANA_SERVICE_ACCOUNT_TOKEN}"
 
+  fetch:
+    type: stdio
+    command: uvx
+    args:
+      - mcp-server-fetch
+
 endpoints:
   custom:
     - name: "OMLX"
