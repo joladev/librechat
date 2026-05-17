@@ -70,6 +70,8 @@ endpoints:
       apiKey: "${OPENROUTER_KEY}"
       baseURL: "https://openrouter.ai/api/v1"
       models:
+        default:
+          - "meta-llama/llama-3-70b-instruct"
         fetch: true
       titleConvo: true
       titleModel: "meta-llama/llama-3-70b-instruct"
@@ -80,6 +82,8 @@ endpoints:
       apiKey: "${FIREWORKS_API_KEY}"
       baseURL: "https://api.fireworks.ai/inference/v1"
       models:
+        default:
+          - "accounts/fireworks/models/mixtral-8x7b-instruct"
         fetch: true
       titleConvo: true
       titleModel: "accounts/fireworks/models/llama-v2-7b-chat"
@@ -92,6 +96,8 @@ endpoints:
       apiKey: "${MISTRAL_API_KEY}"
       baseURL: "https://api.mistral.ai/v1"
       models:
+        default:
+          - "mistral-tiny"
         fetch: true
       titleConvo: true
       titleModel: "mistral-tiny"
@@ -105,6 +111,8 @@ endpoints:
       apiKey: "${GROQ_API_KEY}"
       baseURL: "https://api.groq.com/openai/v1/"
       models:
+        default:
+          - "llama3-70b-8192"
         fetch: true
       titleConvo: true
       titleModel: "mixtral-8x7b-32768"
