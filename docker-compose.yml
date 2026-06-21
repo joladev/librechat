@@ -1,6 +1,6 @@
 services:
   api:
-    image: ghcr.io/danny-avila/librechat:v0.8.6-rc1
+    image: ghcr.io/danny-avila/librechat:v0.8.6
     ports:
       - "3080:3080"
     depends_on:
